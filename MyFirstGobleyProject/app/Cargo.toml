@@ -1,0 +1,11 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uniffi = "0.29.4"
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/main/rust/lib.rs"
