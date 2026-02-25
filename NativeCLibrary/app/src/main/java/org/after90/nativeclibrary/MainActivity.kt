@@ -2,8 +2,8 @@ package org.after90.nativeclibrary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import org.after90.nativeclibrary.databinding.ActivityMainBinding
+import org.after90.hellolibrary.HelloLibrary
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,20 +15,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
-    }
-
-    /**
-     * A native method that is implemented by the 'nativeclibrary' native library,
-     * which is packaged with this application.
-     */
-    external fun stringFromJNI(): String
-
-    companion object {
-        // Used to load the 'nativeclibrary' library on application startup.
-        init {
-            System.loadLibrary("nativeclibrary")
-        }
+        binding.sampleText.text = HelloLibrary().stringFromJNI()
     }
 }
