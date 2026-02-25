@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Native C++ Library"
 include(":app")
+include(":hellolibrary")
