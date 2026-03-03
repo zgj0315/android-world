@@ -18,14 +18,14 @@ import uniffi.rustlibrary.add
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val lib = add(1,2)
+        val sum = add(1,2)
 
         enableEdgeToEdge()
         setContent {
             DemoApplicationWithLibraryTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = HelloLibrary().stringFromJNI(),
+                        name = HelloLibrary().stringFromJNI() + sum.toString(),
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

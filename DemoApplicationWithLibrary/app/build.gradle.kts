@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(files("libs/hellolibrary-release.aar"))
     implementation(files("libs/rustlibrary-release.aar"))
+    implementation("net.java.dev.jna:jna:5.18.1@aar")
     implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
