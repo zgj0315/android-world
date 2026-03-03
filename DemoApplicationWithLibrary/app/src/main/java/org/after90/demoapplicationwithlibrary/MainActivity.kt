@@ -13,10 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.after90.demoapplicationwithlibrary.ui.theme.DemoApplicationWithLibraryTheme
 import org.after90.hellolibrary.HelloLibrary
+import uniffi.rustlibrary.add
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        val lib = add(1,2)
 
         enableEdgeToEdge()
         setContent {
